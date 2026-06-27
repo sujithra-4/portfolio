@@ -104,3 +104,67 @@
 @media(max-width:1050px){#skills .skills-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:780px){#skills .skills-grid{grid-template-columns:repeat(2,minmax(0,1fr))}#skills .skill{min-height:180px}}
 @media(max-width:520px){#skills .skills-grid{grid-template-columns:1fr}#skills .skill{min-height:150px}}
+
+/* Phone polish: denser toolkit, cleaner contact form, no horizontal squeeze */
+@media(max-width:520px){
+	html{scroll-padding-top:72px}
+	.container{width:calc(100% - 28px)}
+	.section{padding:68px 0}
+	.section-head{margin-bottom:28px}
+	.section-head h2,.contact-copy h2{font-size:clamp(32px,10vw,38px);line-height:1.08;letter-spacing:0}
+
+	#skills{overflow:hidden}
+	#skills:before{display:none}
+	#skills .skills-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+	#skills .skill,#skills .skill:nth-child(4n+1),#skills .skill:nth-child(5n){
+		min-height:132px;
+		padding:14px;
+		grid-column:auto;
+		border-radius:14px;
+	}
+	#skills .skill:before{inset:7px;border-radius:10px}
+	#skills .skill>b{width:34px;height:34px;font-size:11px}
+	#skills .skill div{margin-top:18px}
+	#skills .skill h3{font-size:14px;line-height:1.15}
+	#skills .skill p{font-size:10px;line-height:1.25}
+	#skills .skill>small{right:12px;bottom:12px;font-size:14px}
+
+	.contact{overflow:hidden}
+	.contact-grid{grid-template-columns:1fr;gap:24px}
+	.contact-copy{position:static}
+	.contact-links{margin-top:22px}
+	.contact-links a{gap:10px;padding:11px 12px;overflow:hidden}
+	.contact-links span{min-width:0;word-break:break-word}
+	.contact-form{
+		width:100%;
+		max-width:100%;
+		margin:0;
+		padding:20px;
+		border-radius:18px;
+	}
+	.contact-form:before{height:34px;margin:-20px -20px 20px}
+	.contact-form label{margin-bottom:13px}
+	.contact-form input,.contact-form textarea{padding:11px 12px}
+	.contact-form textarea{min-height:118px}
+	.contact-form .button{min-height:52px}
+
+	#modern-portfolio footer{padding:16px 0 calc(16px + env(safe-area-inset-bottom))}
+	#modern-portfolio footer .container{
+		min-height:0;
+		display:grid;
+		grid-template-columns:1fr auto;
+		gap:8px 14px;
+		align-items:center;
+	}
+	#modern-portfolio footer p{margin:0;line-height:1.4}
+	#modern-portfolio footer>a{justify-self:end;white-space:nowrap}
+}
+
+@media(max-width:360px){
+	#skills .skills-grid{gap:8px}
+	#skills .skill{padding:12px;min-height:126px}
+	#skills .skill h3{font-size:13px}
+	#skills .skill>small{font-size:13px}
+	.contact-form{padding:18px}
+	.contact-form:before{margin:-18px -18px 18px}
+}
