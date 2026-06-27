@@ -80,6 +80,17 @@
 @media(max-width:520px){.skills-grid,.achievements{grid-template-columns:1fr}.skill{min-height:150px}.timeline-item{padding:20px}.contact-links a{align-items:flex-start}.contact:before{display:none}.contact-form{padding:23px}.contact-form:before{margin:-23px -23px 22px}}
 @media(prefers-reduced-motion:reduce){.brand span,#skills .section-head:after{animation:none}.nav-links a:after,.skill,.timeline-item,.achievement,.contact-links a{transition:none}}
 
+/* Additional small-screen fixes to prevent horizontal overflow and ensure fluid images */
+@media (max-width:480px){
+	.hero:after, .orb.one, .orb.two {display:none}
+	.container{width:calc(100% - 32px)}
+	img, .project-visual img, .modal-box>img, .featured .project-image img{max-width:100%;height:auto;object-fit:cover}
+	.timeline:before{left:9px}
+	.timeline-item{width:auto;margin-left:0}
+	/* ensure any fixed-width panels shrink on very small screens */
+	.project-slide, .project-visual, .project-content, .cert-stage, .certifications-intro{max-width:100%;box-sizing:border-box}
+}
+
 /* Balanced toolkit grid after adding more skills */
 #skills .skills-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
 #skills .skill,#skills .skill:nth-child(4n+1),#skills .skill:nth-child(5n){grid-column:auto;min-height:210px}
