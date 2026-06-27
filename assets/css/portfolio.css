@@ -141,7 +141,7 @@
 	.journey>.section-head{
 		position:relative;
 		z-index:2;
-		margin-bottom:34px;
+		margin-bottom:0;
 		padding:18px 0 20px 18px;
 		border-top:0;
 		border-bottom:0;
@@ -161,12 +161,19 @@
 		border-radius:999px;
 		background:linear-gradient(var(--cyan),#47e6b1,#f5b942);
 	}
-	.journey>.section-head .muted{font-size:13px;line-height:1.55}
+	.journey>.section-head .muted{
+		position:relative;
+		z-index:2;
+		max-width:300px;
+		margin-top:14px;
+		font-size:13px;
+		line-height:1.55;
+	}
 	.timeline{
 		display:flex;
 		gap:14px;
-		margin:0 -14px;
-		padding:2px 14px 18px;
+		margin:34px -14px 0;
+		padding:12px 14px 18px;
 		overflow-x:auto;
 		overflow-y:hidden;
 		scroll-snap-type:x mandatory;
