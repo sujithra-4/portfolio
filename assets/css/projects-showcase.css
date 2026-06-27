@@ -58,7 +58,7 @@
 	.project-slide{border-radius:14px;overflow:hidden}
 	.project-visual{
 		min-height:0;
-		aspect-ratio:16/9;
+		aspect-ratio:2.25/1;
 		border-radius:14px 14px 0 0;
 	}
 	.project-visual:before{inset:8px;border-radius:10px}
@@ -77,40 +77,54 @@
 		font-size:11px;
 	}
 	.project-content{
-		min-height:315px;
-		padding:22px 18px 20px;
+		min-height:0;
+		padding:18px 16px 16px;
 		border-radius:0 0 14px 14px;
 	}
-	.project-content:before{top:22px;bottom:22px;width:2px}
+	.project-content:before{top:18px;bottom:18px;width:2px}
 	.project-content .eyebrow{
-		margin-bottom:8px;
+		margin-bottom:7px;
 		font-size:10px;
-		line-height:1.55;
-		letter-spacing:2.4px;
+		line-height:1.45;
+		letter-spacing:2.1px;
 		overflow-wrap:anywhere;
 	}
 	.project-content h3{
-		font-size:clamp(23px,8vw,30px);
-		line-height:1.06;
+		font-size:clamp(22px,7.4vw,28px);
+		line-height:1.05;
 		letter-spacing:0;
-		margin-bottom:12px;
+		margin-bottom:9px;
 		display:-webkit-box;
 		-webkit-line-clamp:2;
 		-webkit-box-orient:vertical;
 		overflow:hidden;
 	}
 	.project-content p:not(.eyebrow){
-		font-size:14px;
-		line-height:1.55;
+		font-size:13px;
+		line-height:1.5;
 		display:-webkit-box;
-		-webkit-line-clamp:3;
+		-webkit-line-clamp:2;
 		-webkit-box-orient:vertical;
 		overflow:hidden;
 	}
-	.project-badges{gap:8px;margin-top:18px}
-	.project-badges span{padding:6px 9px;font-size:11px}
-	.project-actions{margin-top:20px;padding-top:18px}
-	.project-link{min-height:46px;border-radius:16px}
+	.project-badges{gap:7px;margin-top:13px;max-height:62px;overflow:hidden}
+	.project-badges span{padding:5px 8px;font-size:10px}
+	.project-badges span:nth-child(n+5){display:none}
+	.project-actions{
+		display:grid;
+		grid-template-columns:repeat(2,minmax(0,1fr));
+		gap:9px;
+		margin-top:15px;
+		padding-top:14px;
+	}
+	.project-actions:has(.project-link:only-child){grid-template-columns:1fr}
+	.project-link{
+		min-height:42px;
+		padding:9px 10px;
+		border-radius:14px;
+		font-size:12px;
+		white-space:nowrap;
+	}
 	.project-carousel-controls{grid-template-columns:38px 1fr 38px;gap:10px;margin-top:12px}
 	.project-nav{width:38px;height:38px}
 	.project-dots{gap:7px}
