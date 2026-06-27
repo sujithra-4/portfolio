@@ -89,6 +89,13 @@
 	.timeline-item{width:auto;margin-left:0}
 	/* ensure any fixed-width panels shrink on very small screens */
 	.project-slide, .project-visual, .project-content, .cert-stage, .certifications-intro{max-width:100%;box-sizing:border-box}
+	/* toolkit: show 2 columns on small phones for better density */
+	#skills .skills-grid, .skills-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+	.skill{min-height:120px}
+	/* contact: stack and center form */
+	.contact-grid{grid-template-columns:1fr;gap:24px}
+	.contact-copy{position:static}
+	.contact-form{margin:0 auto}
 }
 
 /* Balanced toolkit grid after adding more skills */
