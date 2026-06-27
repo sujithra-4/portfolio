@@ -141,7 +141,7 @@
 	.journey>.section-head{
 		position:relative;
 		z-index:2;
-		margin-bottom:24px;
+		margin-bottom:34px;
 		padding:18px 0 20px 18px;
 		border-top:0;
 		border-bottom:0;
@@ -163,20 +163,26 @@
 	}
 	.journey>.section-head .muted{font-size:13px;line-height:1.55}
 	.timeline{
-		display:grid;
+		display:flex;
 		gap:14px;
-		margin:0;
-		padding:0;
-		overflow:visible;
+		margin:0 -14px;
+		padding:2px 14px 18px;
+		overflow-x:auto;
+		overflow-y:hidden;
+		scroll-snap-type:x mandatory;
+		scroll-padding-inline:14px;
+		-webkit-overflow-scrolling:touch;
 	}
 	.timeline::-webkit-scrollbar{display:none}
 	.timeline:before{display:none}
 	.timeline-item,.timeline-item:nth-child(odd),.timeline-item:nth-child(even){
-		width:100%;
-		min-height:0;
+		flex:0 0 min(82vw,330px);
+		width:auto;
+		min-height:300px;
 		margin-left:0;
-		padding:20px 16px 18px 72px;
+		padding:82px 18px 20px;
 		border-radius:18px;
+		scroll-snap-align:start;
 		background:
 			linear-gradient(145deg,color-mix(in srgb,var(--study-accent) 13%,transparent),rgba(9,15,25,.88)),
 			rgba(255,255,255,.03);
@@ -185,7 +191,7 @@
 		overflow:hidden;
 		transform:none;
 	}
-	.timeline-item:nth-child(even){margin-left:22px;width:calc(100% - 22px)}
+	.timeline-item:nth-child(even){margin-left:0;width:auto}
 	.timeline-item:nth-child(1){--study-accent:#35dcff}
 	.timeline-item:nth-child(2){--study-accent:#47e6b1}
 	.timeline-item:nth-child(3){--study-accent:#f5b942}
@@ -204,11 +210,11 @@
 	.dot,.timeline-item:nth-child(even) .dot{
 		left:18px;
 		right:auto;
-		top:22px;
+		top:18px;
 		display:grid;
 		place-items:center;
-		width:40px;
-		height:40px;
+		width:48px;
+		height:48px;
 		border:1px solid color-mix(in srgb,var(--study-accent) 42%,rgba(255,255,255,.1));
 		background:color-mix(in srgb,var(--study-accent) 15%,rgba(255,255,255,.04));
 		box-shadow:0 0 30px color-mix(in srgb,var(--study-accent) 24%,transparent);
@@ -223,9 +229,12 @@
 	.timeline-item:nth-child(2) .dot:before{content:"HS"}
 	.timeline-item:nth-child(3) .dot:before{content:"SS"}
 	.timeline time{
+		position:absolute;
+		left:78px;
+		top:25px;
 		display:inline-flex;
-		max-width:100%;
-		margin-bottom:12px;
+		max-width:calc(100% - 98px);
+		margin-bottom:0;
 		padding:6px 9px;
 		border-radius:999px;
 		background:rgba(255,255,255,.045);
