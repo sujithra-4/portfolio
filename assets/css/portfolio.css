@@ -162,17 +162,12 @@
 		background:linear-gradient(var(--cyan),#47e6b1,#f5b942);
 	}
 	.journey>.section-head .muted{
-		position:relative;
-		z-index:2;
-		max-width:300px;
-		margin-top:14px;
-		font-size:13px;
-		line-height:1.55;
+		display:none;
 	}
 	.timeline{
 		display:flex;
 		gap:14px;
-		margin:34px -14px 0;
+		margin:92px -14px 0;
 		padding:12px 14px 18px;
 		overflow-x:auto;
 		overflow-y:hidden;
